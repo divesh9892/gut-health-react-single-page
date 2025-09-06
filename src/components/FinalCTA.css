@@ -1,0 +1,260 @@
+.final-cta-section {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--soft-blue) 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.cta-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-icon {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.cta-content h2 {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.cta-subtitle {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 50px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.benefit-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.benefit-item span:last-child {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.cta-action {
+  margin-bottom: 40px;
+}
+
+.cta-main-button {
+  font-size: 24px;
+  padding: 25px 50px;
+  background: white;
+  color: var(--primary-green);
+  border: none;
+  margin-bottom: 20px;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cta-main-button:hover {
+  background: var(--warm-beige);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cta-guarantee {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.cta-urgency {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 30px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.urgency-text {
+  color: white;
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.cta-social-proof {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.proof-item {
+  text-align: center;
+}
+
+.proof-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.proof-label {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-element {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.3;
+  animation: floatGentle 8s ease-in-out infinite;
+}
+
+.element-1 {
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.element-2 {
+  top: 25%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.element-3 {
+  top: 60%;
+  left: 5%;
+  animation-delay: 4s;
+}
+
+.element-4 {
+  top: 70%;
+  right: 10%;
+  animation-delay: 6s;
+}
+
+.element-5 {
+  top: 40%;
+  right: 25%;
+  animation-delay: 1s;
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(5deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-content h2 {
+    font-size: 2.5rem;
+  }
+  
+  .cta-subtitle {
+    font-size: 18px;
+  }
+  
+  .cta-benefits {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .benefit-item {
+    padding: 12px 16px;
+  }
+  
+  .benefit-item span:last-child {
+    font-size: 15px;
+  }
+  
+  .cta-main-button {
+    font-size: 20px;
+    padding: 20px 40px;
+  }
+  
+  .cta-urgency {
+    padding: 15px 20px;
+  }
+  
+  .urgency-text {
+    font-size: 16px;
+  }
+  
+  .cta-social-proof {
+    gap: 40px;
+  }
+  
+  .proof-number {
+    font-size: 2rem;
+  }
+  
+  .proof-label {
+    font-size: 14px;
+  }
+  
+  .floating-element {
+    display: none;
+  }
+}

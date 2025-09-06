@@ -1,0 +1,144 @@
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(135deg, var(--warm-beige) 0%, var(--light-green) 100%);
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(168, 213, 186, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(184, 212, 240, 0.1) 0%, transparent 50%);
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, var(--primary-green), var(--soft-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.hero-subheading {
+  font-size: 20px;
+  color: var(--text-light);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  font-size: 20px;
+  padding: 20px 40px;
+  margin-top: 20px;
+}
+
+.hero-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.video-placeholder {
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, var(--light-green), var(--warm-beige));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.video-placeholder:hover {
+  transform: scale(1.02);
+}
+
+.play-button {
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.video-placeholder:hover .play-button {
+  transform: scale(1.1);
+}
+
+.video-placeholder p {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0;
+}
+
+.hero-decoration {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.hero-decoration svg {
+  width: 100%;
+  height: 120px;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .hero-text {
+    text-align: center;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-subheading {
+    font-size: 18px;
+  }
+  
+  .hero-cta {
+    font-size: 18px;
+    padding: 16px 32px;
+  }
+  
+  .video-container {
+    max-width: 400px;
+  }
+}
