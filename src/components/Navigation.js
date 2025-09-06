@@ -2,20 +2,20 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Navigation.css";
 
+const navItems = [
+  { id: "home", label: "Home", href: "#home" },
+  { id: "problems", label: "Challenges", href: "#problems" },
+  { id: "solution", label: "Solution", href: "#solution" },
+  { id: "team", label: "Team", href: "#team" },
+  { id: "consultation", label: "Free Call", href: "#consultation" },
+  { id: "testimonials", label: "Stories", href: "#testimonials" },
+  { id: "faq", label: "FAQ", href: "#faq" },
+];
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-
-  const navItems = [
-    { id: "home", label: "Home", href: "#home" },
-    { id: "problems", label: "Challenges", href: "#problems" },
-    { id: "solution", label: "Solution", href: "#solution" },
-    { id: "team", label: "Team", href: "#team" },
-    { id: "consultation", label: "Free Call", href: "#consultation" },
-    { id: "testimonials", label: "Stories", href: "#testimonials" },
-    { id: "faq", label: "FAQ", href: "#faq" },
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
